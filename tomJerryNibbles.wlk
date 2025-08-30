@@ -1,7 +1,7 @@
 object tom {
     var energia = 50
     
-    // estas 2 variables las agregamos al final
+    // estas 2 variables las agregamos al final de la clase
     var ultimoRatonComido = null
     var metrosRecorridos = 0
     // Luego de actualizar las variables en los métodos, nos dimos cuenta que neceaitamos consultar (getters)
@@ -18,9 +18,9 @@ object tom {
         
         
     }
-    method correr(cantodadDeMetros){
-        energia = energia - cantodadDeMetros/2
-        metrosRecorridos = cantodadDeMetros
+    method correr(cantidadDeMetros){
+        energia = energia - cantidadDeMetros/2
+        metrosRecorridos = cantidadDeMetros
     }
     // consulta
     method velocidadMaxima(energia) = 5 + energia/10
@@ -44,7 +44,7 @@ object jerry {
     var edad = 2
     // como el peso ya lo puedo calcular con la edad, NO defino una variable peso
     // No hago un getter para edad porque no es estrictamente necedario.
-    // El test es peso, cumplirAnio, peso.
+    // El getter sería hacer peso, cumplirAnio, peso.
     method peso() = edad*20
     method cumplirAnio(){
         edad += 1
