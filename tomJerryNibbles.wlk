@@ -23,9 +23,9 @@ object tom {
         metrosRecorridos = cantidadDeMetros
     }
     // consulta
-    method velocidadMaxima(energia) = 5 + energia/10
-    method puedeCazarAdistancia(unaDistancia){
-        unaDistancia/2 <= energia
+    method velocidadMaxima() = 5 + energia/10
+    method puedeCazarADistancia(unaDistancia){
+        return unaDistancia/2 <= energia
     }
     // subtarea condicional(en el contrato tiene una precondición)
     method cazarA(unRaton, unaDistancia){
@@ -34,7 +34,7 @@ object tom {
     }
     // subtarea total, no falla nunca
     method cazarA_SiPuede(unRaton, unaDistancia){
-        if (self.puedeCazarAdistancia(unaDistancia)){
+        if (self.puedeCazarADistancia(unaDistancia)){
             self.cazarA(unRaton, unaDistancia)
         }
     }
